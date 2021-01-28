@@ -1,11 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
+import { Cell, Checkbox } from 'zarm';
 
 function App() {
     return (
-        <div className="test">
-            <span className="test-label">label</span>
+        <div>
+            <div className="test">
+                <span className="test-label">label</span>
+            </div>
+            <Cell><Checkbox>普通</Checkbox></Cell>
+            <Cell><Checkbox defaultChecked>默认选中</Checkbox></Cell>
+            <Cell><Checkbox disabled>禁用</Checkbox></Cell>
+            <Cell><Checkbox defaultChecked disabled>选中且禁用</Checkbox></Cell>
         </div>
     )
     // return (

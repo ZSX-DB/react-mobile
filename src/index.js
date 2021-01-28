@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'lib-flexible'
+import 'zarm/dist/zarm.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
