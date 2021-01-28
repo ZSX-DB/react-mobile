@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+/*---------------------------------------------*/
+.test{
+  width: 300px;
+  height: 60px;
+  background-color: #282c34;
+}
+.test-label{
+  font-size: 21px;
+  color: #fff;
+}
