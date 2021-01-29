@@ -1,3 +1,5 @@
+import '@/style/home.scss'
+
 const Home = () => {
     let count = 0
     let startY, endY
