@@ -1,25 +1,15 @@
-import logo from '@/logo.svg'
-import '@/App.css'
+import {BrowserRouter, Switch, Redirect, Route} from "react-router-dom"
+import Home from "@/view/home"
+import NotFound from "@/view/notFound"
 
-const App = () => {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    React Mobile
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
-    )
-}
+const App = () => (
+    <BrowserRouter>
+        <Switch>
+            <Redirect exact from='/' to='/home'/>
+            <Route path='/home' render={() => <Home/>}/>
+            <Route path="*" render={() => <NotFound/>}/>
+        </Switch>
+    </BrowserRouter>
+)
 
 export default App
