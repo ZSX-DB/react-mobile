@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# React Mobile
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -14,57 +14,42 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+## 本项目做了什么
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* 配置rem，可以自动适配不同ppi的屏幕
+* 引入移动端框架，hook库等，方便开发
+* 封装axios，根据请求自动显隐loading，鉴权等需自定义配置
+* 配置完毕sass，并提供了一些使用频率较高的类
+* 配置完成路由，提供了重定向和404示例
+* 通过mobx配置完成store
+* 配置.gitignore
 
-### `npm run build`
+***
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 引入的库
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **zarm**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  react的移动端框架较少，zarm是其中一个，其官网上的示例均为hook api，hook api也是一种比较优雅的复用方式。
 
-### `npm run eject`
+  链接：https://zarm.gitee.io/#/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* **mobx & mobx-react**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  mobx是一个优秀的状态管理库，通过依赖注入的方式可实现全局状态。
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  mobx-react是当前最适合react的状态管理工具，7.1.0版本提供了hook api，其中 `useLocalStore` 和 `useObserver` 可提供类似vue3的编程体验。
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  链接：https://cn.mobx.js.org/ & https://github.com/mobxjs/mobx-react
 
-## Learn More
+* **ahooks**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  ahooks提供了一系列的自定义hooks，本人也提供了两个自定义hook `useDebounce` 和 `useThrottle`，与ahooks不同的是，`useDebounce` 是立即执行后续不执行， `useThrottle` 是delay后才执行方法，根据业务需求选择使用。
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  链接：https://ahooks.js.org/zh-CN
 
-### Code Splitting
+* **react-router-dom**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  路由模块
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  链接：https://serializedowen.com/docs/react-router-dom/
