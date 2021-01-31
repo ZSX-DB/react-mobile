@@ -5,7 +5,7 @@ import '@/style/home.scss'
 import '@/style/usual.scss'
 
 
-const Home = () => {
+const Portal = () => {
 
     let app = useRef(null)
 
@@ -74,4 +74,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Portal
