@@ -2,7 +2,7 @@ import axios from "axios"
 import {Loading, ActivityIndicator} from "zarm"
 
 const service = axios.create({
-    baseURL: '',
+    baseURL: '/api',
     timeout: 10000,
     withCredentials: true
 })
