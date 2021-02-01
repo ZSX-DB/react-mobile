@@ -2,14 +2,12 @@ import logo from '@/image/logo.svg'
 import github from '@/image/github.svg'
 import {useEffect, useRef} from 'react'
 import '@/style/home.scss'
-import '@/style/usual.scss'
-
 
 const Portal = () => {
 
     let app = useRef(null)
 
-    useEffect(()=>{
+    useEffect(() => {
 
         let count = 0
         let startY, endY
@@ -34,7 +32,7 @@ const Portal = () => {
         <div className="wrapper">
             <div className="page app" ref={app}>
                 <header className="app-header">
-                    <img src={logo} className="app-logo" alt="logo" />
+                    <img src={logo} className="app-logo" alt="logo"/>
                     <h1>
                         React Mobile
                     </h1>
@@ -59,14 +57,14 @@ const Portal = () => {
                 </a>
             </div>
             <div className="page github-box">
-                <img src={github} className="github-icon" alt="github" />
+                <img src={github} className="github-icon" alt="github"/>
                 <div className="address center">
                     GitHub Address
                 </div>
                 <a className="address-link"
-                     href="https://github.com/ZSX-DB/react-mobile"
-                     target="_blank"
-                     rel="noopener noreferrer">
+                   href="https://github.com/ZSX-DB/react-mobile"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     https://github.com/ZSX-DB/react-mobile
                 </a>
             </div>

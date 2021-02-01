@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import {Icon, TabBar} from 'zarm'
-import '@/style/usual.scss'
 
 const Home = () => {
     const [activeKey, setActiveKey] = useState('home')

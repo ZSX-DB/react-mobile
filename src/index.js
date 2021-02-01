@@ -1,12 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'lib-flexible'
-import 'zarm/dist/zarm.min.css'
-import '@/index.css'
 import {Provider} from 'mobx-react'
 import App from '@/App'
 import reportWebVitals from '@/reportWebVitals'
 import * as stores from '@/store'
+import 'lib-flexible'
+import 'zarm/dist/zarm.min.css'
+import '@/style/global.scss'
+import '@/index.css'
 
 ReactDOM.render(
     <React.StrictMode>
