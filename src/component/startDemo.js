@@ -1,5 +1,5 @@
 const StartDemo = () => (
-    <div className="text-center">
+    <div className="top-margin page-padding text-center">
         <h1>Start your project</h1>
     </div>
 )

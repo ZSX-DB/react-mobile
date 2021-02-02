@@ -2,7 +2,7 @@
   "name": "react-mobile",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://www.v2ex.com",
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",

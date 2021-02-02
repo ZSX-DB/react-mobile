@@ -6,6 +6,10 @@
   background-color: #f6f6f6;
 }
 
+.page-padding {
+  padding: 10px;
+}
+
 .center {
   display: flex;
   align-items: center;
@@ -22,10 +26,14 @@
   align-items: center;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-.common-margin{
+.common-margin {
   margin: 3px;
+}
+
+.top-margin {
+  margin-top: 35px;
 }

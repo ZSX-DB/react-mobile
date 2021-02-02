@@ -6,7 +6,7 @@ import {Button} from "zarm"
 const StoreDemo = inject('AppStore')(({AppStore}) => {
 
     return useObserver(() => (
-        <div className="text-center">
+        <div className="top-margin page-padding text-center">
             <h1>Mobx示例</h1>
             <h2>Count: {AppStore.count}</h2>
             <Button theme="primary"

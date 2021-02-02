@@ -1,66 +1,53 @@
 import {useState, useEffect} from 'react'
+import {Radio} from 'zarm'
 import service from '@/util/service'
 
 const HookDemo = () => {
 
-    const [language, setLanguage] = useState('js')
+    const [language, setLanguage] = useState('JavaScript')
     const [info, setInfo] = useState({})
     const languageList = [
         {
-            searchLabel: 'js',
-            fullName: 'JavaScript'
+            lid: 1,
+            searchLabel: 'JavaScript'
         },
         {
-            searchLabel: 'python',
-            fullName: 'Python'
+            lid: 2,
+            searchLabel: 'Python'
         },
         {
-            searchLabel: 'go',
-            fullName: 'Golang'
-        },
-        {
-            searchLabel: 'java',
-            fullName: 'Java'
-        },
-        {
-            searchLabel: 'ruby',
-            fullName: 'Ruby'
-        },
-        {
-            searchLabel: 'php',
-            fullName: 'PHP'
+            lid: 3,
+            searchLabel: 'Golang'
         }
     ]
-    const initData = () => {
+    const handleChange = val => {
+        setLanguage(val)
+    }
+    useEffect(() => {
         service({
-            url: '/nodes/show.json',
+            url: '/GET/language',
             method: 'get',
             params: {
                 name: language
             }
         }).then(resp => {
-            setInfo(resp.data)
+            setInfo(resp.data.data)
         })
-    }
-    const handleChange = event => {
-        setLanguage(event.target.value)
-    }
-    useEffect(() => {
-        initData()
     }, [language])
 
     return (
-        <div className="text-center">
+        <div className="top-margin page-padding text-center">
             <h1>Hook示例</h1>
-            <img src={info.avatar_large} alt="logo" className="language-logo"/>
             <h2>{info.title}</h2>
-            <h4>{info.header}</h4>
-            <span>Select the programming language</span><br/>
-            <select value={language} onChange={handleChange}>
-                {languageList.map(item => <option key={item.searchLabel} value={item.searchLabel}>
-                    {item.fullName}
-                </option>)}
-            </select>
+            <h3>{info.detail}</h3>
+            <p>Select the programming language</p>
+            <Radio.Group defaultValue="JavaScript" onChange={handleChange}>
+                {languageList.map(item=>(
+                    <Radio key={item.lid} value={item.searchLabel}>
+                        {item.searchLabel}
+                    </Radio>
+                ))}
+            </Radio.Group>
         </div>
     )
 }

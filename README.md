@@ -21,7 +21,7 @@ You will also see any lint errors in the console.
 * 封装axios，根据请求自动显隐loading，鉴权等需自定义配置
 * 配置完毕sass，并提供了一些使用频率较高的类
 * 配置完成路由，提供了重定向和404示例
-* 通过mobx配置完成store
+* 通过mobx配置完成store，并提供了使用示例
 * 配置.gitignore
 
 ***
