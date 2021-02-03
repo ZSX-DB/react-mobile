@@ -1,6 +1,6 @@
 ## serve.js
 
-**home主页下的HookDemo请求数据的后台代码。**
+**home主页下的HookDemo请求数据的后台代码**
 
 * npm install express
 * create serve.js
