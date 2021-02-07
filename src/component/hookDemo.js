@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import {Radio} from 'zarm'
-import service from '@/util/service'
+import {searchLanguage} from "@/api/demo"
 
 const HookDemo = () => {
 
@@ -24,12 +24,8 @@ const HookDemo = () => {
         setLanguage(val)
     }
     useEffect(() => {
-        service({
-            url: '/GET/language',
-            method: 'get',
-            params: {
-                name: language
-            }
+        searchLanguage({
+            name: language
         }).then(resp => {
             setInfo(resp.data.data)
         })
@@ -42,7 +38,7 @@ const HookDemo = () => {
             <h3>{info.detail}</h3>
             <p>Select the programming language</p>
             <Radio.Group defaultValue="JavaScript" onChange={handleChange}>
-                {languageList.map(item=>(
+                {languageList.map(item => (
                     <Radio key={item.lid} value={item.searchLabel}>
                         {item.searchLabel}
                     </Radio>
