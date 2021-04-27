@@ -16,15 +16,15 @@ You will also see any lint errors in the console.
 
 ## 本项目做了什么
 
-* 配置rem，可以自动适配不同ppi的屏幕
-* 引入移动端框架，hook库等，方便开发
-* 封装axios，根据请求自动显隐loading，鉴权等需自定义配置
-* 配置完毕sass，并提供了一些使用频率较高的类
-* 配置完成路由，提供了重定向和404示例
-* 通过mobx配置完成store，并提供了使用示例
-* 通过cdn方式引入VConsole，方便真机调试
+* 配置 rem，可以自动适配不同 ppi 的屏幕
+* 引入移动端框架，hook 库等，方便开发
+* 封装 axios ，根据请求自动显隐 loading，鉴权等需自定义配置
+* 配置完毕 sass，并提供了一些使用频率较高的类，配置 css modules
+* 配置完成路由，提供了重定向和 404 示例
+* 通过 mobx 配置完成 store ，并提供了使用示例
+* 通过 cdn 方式引入 VConsole，方便真机调试
 * 合理的项目结构
-* 配置.gitignore
+* 配置 .gitignore
 
 ***
 
@@ -60,4 +60,3 @@ You will also see any lint errors in the console.
 
 **项目介绍：https://juejin.cn/post/6925093292325634061/**
 
-  

@@ -2,6 +2,7 @@ import StoreDemo from '@/component/storeDemo'
 import HookDemo from '@/component/hookDemo'
 import StartDemo from '@/component/startDemo'
 import React, {useState} from 'react'
+import styles from '@/style/home.module.scss'
 import {TabBar} from 'zarm'
 
 const Home = () => {
@@ -16,7 +17,7 @@ const Home = () => {
     }
 
     return (
-        <div className="wrapper">
+        <div className={`${styles['page-wrapper']}`}>
 
             {page[activeKey]}
 

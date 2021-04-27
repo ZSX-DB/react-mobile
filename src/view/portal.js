@@ -1,7 +1,7 @@
 import logo from '@/image/logo.svg'
 import github from '@/image/github.svg'
+import styles from '@/style/portal.module.scss'
 import {useEffect, useRef} from 'react'
-import '@/style/home.scss'
 
 const Portal = () => {
 
@@ -25,19 +25,20 @@ const Portal = () => {
             }
             const {style, clientHeight} = app.current
             style.marginTop = `-${count * clientHeight}px`
+            console.log(app.current, clientHeight, style.marginTop)
         })
     })
 
     return (
-        <div className="wrapper">
-            <div className="page app" ref={app}>
-                <header className="app-header">
-                    <img src={logo} className="app-logo" alt="logo"/>
+        <div className={styles['page-wrapper']}>
+            <div className={`${styles.page} ${styles['app-box']}`} ref={app}>
+                <header className={styles['app-header']}>
+                    <img src={logo} className={styles['app-logo']} alt="logo"/>
                     <h1>
                         React Mobile
                     </h1>
                     <a
-                        className="app-link"
+                        className={styles['app-link']}
                         href="https://react.docschina.org/"
                         target="_blank"
                         rel="noopener noreferrer">
@@ -45,23 +46,23 @@ const Portal = () => {
                     </a>
                 </header>
             </div>
-            <div className="page zarm-box">
-                <div className="zarm-label-box center">
-                    <span className="test">ZARM</span>
+            <div className={`${styles.page} ${styles['zarm-box']}`}>
+                <div className={`${styles['zarm-label-box']} center`}>
+                    <span>ZARM</span>
                 </div>
-                <a className="zarm-link"
+                <a className={styles['zarm-link']}
                    href="https://zarm.gitee.io/#/"
                    target="_blank"
                    rel="noopener noreferrer">
                     Use Zarm
                 </a>
             </div>
-            <div className="page github-box">
-                <img src={github} className="github-icon" alt="github"/>
-                <div className="address center">
+            <div className={`${styles.page} ${styles['github-box']}`}>
+                <img src={github} className={`${styles['github-icon']}`} alt="github"/>
+                <div className={`${styles.address} center`}>
                     GitHub Address
                 </div>
-                <a className="address-link"
+                <a className={`${styles['address-link']}`}
                    href="https://github.com/ZSX-DB/react-mobile"
                    target="_blank"
                    rel="noopener noreferrer">

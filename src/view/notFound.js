@@ -1,11 +1,11 @@
-import '@/style/notFound.scss'
+import styles from '@/style/notFound.module.scss'
 
 const NotFound = () => (
-    <div className="not-found-box">
-        <div className="status">
+    <div className={styles['not-found-box']}>
+        <div className={styles.status}>
             Error 404
         </div>
-        <div className="introduce">
+        <div className={styles.introduce}>
             Can not find the page !!!
         </div>
     </div>
